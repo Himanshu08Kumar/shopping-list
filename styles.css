@@ -39,9 +39,9 @@ body{
 }
 
 .list-item li{
-    color: white;
+    color: rgb(255, 255, 255);
     list-style: none;
-    background-color: #8181816e;
+    background-color: #53525287;
     border: 0.5px solid #f2f2f2;
     padding: 3px 10px;
     font-size: 18px;

@@ -15,9 +15,11 @@ btn.addEventListener('click', (e)=>{
         li.appendChild(deleteBtn);
 
     }else{
-        err.style.color = 'orangeRed';
-        err.style.fontSize  = '14px'
-        err.textContent = 'Please enter a value';
+        err.style.color = '#B31312';
+        err.style.fontSize  = '18px'
+        err.style.paddingBottom = '5px' 
+        // err.style.textAlign  = 'center'
+        err.textContent = 'Please enter some text';
         setTimeout((e)=>{
         err.textContent = '';
          },2000)
