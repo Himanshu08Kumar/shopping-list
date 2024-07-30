@@ -50,6 +50,9 @@ body{
     align-items: center;
     
 }
+.ree{
+    color: red;
+}
 .remove-item{
     background: none;
     border: none;
