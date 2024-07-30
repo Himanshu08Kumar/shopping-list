@@ -158,3 +158,16 @@ body{
     color: #fff;
   }
   
+  @media all and (max-width : 492px){
+    .header{
+      max-width: 100%;
+      /* padding: 5px 10px; */
+      align-items: center;
+      margin: 0 auto;
+     
+    }
+    #headText{
+      font-size: 2rem;
+      
+    }
+  }
