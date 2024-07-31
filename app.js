@@ -15,6 +15,7 @@ btn.addEventListener('click', (e)=>{
        listItem.appendChild(li);
         const deleteBtn = createButton();
         li.appendChild(deleteBtn);
+        hiddenBtn();
 
     }else{
         err.style.color = '#B31312';
@@ -37,35 +38,47 @@ function createButton(){
     button.addEventListener('click', ()=>{
         if(confirm('Are you sure??')){
             button.parentElement.remove();
+            hiddenBtn();
         }
     });
     return button;
 }
+
  function createIcon(){
     const icon = document.createElement('i');
     icon.className = 'fa-solid fa-xmark';
     return icon; 
  }
 
-//  search.addEventListener('keyup',(e)=>{
-//     let text = e.target.value.toLowerCase();
-//     let items = listItem.getElementsByTagName('li');
-//     Array.from(items).forEach((item)=>{
-//         let itemName = item.firstChild.textContent;
-//         if(itemName.toLowerCase().indexOf(text) != -1){
-//             item.style.display = 'flex';
-//         }else{
-//             item.style.display = 'none';
-//         }
-//     })
-//  })
+ search.addEventListener('keyup',(e)=>{
+    let text = e.target.value.toLowerCase();
+    let items = listItem.getElementsByTagName('li');
+    Array.from(items).forEach((item)=>{
+        let itemName = item.firstChild.textContent;
+        if(itemName.toLowerCase().indexOf(text) != -1){
+            item.style.display = 'flex';
+        }else{
+            item.style.display = 'none';
+        }
+    })
+ })
 
 
-//  clearAll.addEventListener('click',()=>{
-//     if(confirm('Are you sure ? You want to clear all the Data?')){
-//         listItem.innerHTML = '';
-//     }
-//  })
+function hiddenBtn(){
+    if (listItem.innerHTML.trim() === '') {
+        clearAll.style.display = 'none';
+    } else {
+        clearAll.style.display = 'block';
+    }
+}
 
+ clearAll.addEventListener('click',()=>{
+    if(confirm('Are you sure ? You want to clear all the Data?')){
+        listItem.innerHTML = '';
+        hiddenBtn();
+    }
+ })
+
+hiddenBtn();
 
  
