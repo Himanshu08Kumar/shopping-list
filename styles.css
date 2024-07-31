@@ -36,6 +36,7 @@ body{
     margin-bottom: 2rem;
     border-radius: 5px;
     border: none;
+    outline-style: none;
 }
 #searchItem{
   width: 100%;
@@ -43,7 +44,7 @@ body{
   background-color: #f1f1f172;
   border: none;
   font-size: 16px;
-  
+  outline-style: none;
   font-weight: 600;
   box-shadow: 1px 1px 2px 2px rgb(70, 82, 56);
   border-bottom: 1px solid #f3f3f3;
@@ -51,9 +52,6 @@ body{
   margin-bottom: 8px;
 }
 
-#searchItem:active{
-  border: none;
-}
 #clearAll{
   width: 100%;
 }
