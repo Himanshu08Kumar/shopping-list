@@ -1,7 +1,9 @@
 const inputText = document.querySelector('#inputText');
 const btn = document.querySelector('.btn');
 const listItem = document.querySelector('.list-item');
+const search = document.querySelector('#searchItem')
 const err = document.querySelector('.err');
+const clearAll = document.querySelector('#clearAll');
 
 btn.addEventListener('click', (e)=>{
     e.preventDefault();
@@ -11,7 +13,7 @@ btn.addEventListener('click', (e)=>{
        li.textContent = text;
        inputText.value = '';
        listItem.appendChild(li);
-        const deleteBtn = createButton('list-item li remove-item');
+        const deleteBtn = createButton();
         li.appendChild(deleteBtn);
 
     }else{
@@ -26,20 +28,44 @@ btn.addEventListener('click', (e)=>{
     }
     
 })
-function createButton(classes){
+function createButton(){
     const button = document.createElement('button');
-    button.className = classes;
-    const icon = createIcon('fa-solid fa-xmark');
+    button.className = 'list-item li remove-item';
+    const icon = createIcon();
     button.appendChild(icon);
 
     button.addEventListener('click', ()=>{
-        button.parentElement.remove();
+        if(confirm('Are you sure??')){
+            button.parentElement.remove();
+        }
     });
     return button;
 }
- function createIcon(classes){
+ function createIcon(){
     const icon = document.createElement('i');
-    icon.className = classes;
+    icon.className = 'fa-solid fa-xmark';
     return icon; 
  }
 
+//  search.addEventListener('keyup',(e)=>{
+//     let text = e.target.value.toLowerCase();
+//     let items = listItem.getElementsByTagName('li');
+//     Array.from(items).forEach((item)=>{
+//         let itemName = item.firstChild.textContent;
+//         if(itemName.toLowerCase().indexOf(text) != -1){
+//             item.style.display = 'flex';
+//         }else{
+//             item.style.display = 'none';
+//         }
+//     })
+//  })
+
+
+//  clearAll.addEventListener('click',()=>{
+//     if(confirm('Are you sure ? You want to clear all the Data?')){
+//         listItem.innerHTML = '';
+//     }
+//  })
+
+
+ 
