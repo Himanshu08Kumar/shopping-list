@@ -5,37 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Kalnia+Glaze:wght@100..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Kalnia+Glaze:wght@100..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Shopping List</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" href="./images/list.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="shortcut icon" href="./images/list.png" type="image/x-icon" />
   </head>
   <body>
     <div class="container">
-    <header>
+      <header>
         <div class="header">
-            <img src="./images/note.png" alt="">
-            <h1 id="headText">Shopping List</h1>
+          <img src="./images/note.png" alt="" />
+          <h1 id="headText">Shopping List</h1>
         </div>
         <h2 class="err"></h2>
-    </header>
-    <form action="">
+      </header>
+      <form action="">
         <div class="input">
-            <input type="text" name="inputText" id="inputText" placeholder="Enter Item">
-            <button class="btn"><i class="fa-solid fa-plus" style="padding-right: 2px;"></i>Add Item</button>
+          <input
+            type="text"
+            name="inputText"
+            id="inputText"
+            placeholder="Enter Item"
+          />
+          <button class="btn">
+            <i class="fa-solid fa-plus" style="padding-right: 2px"></i>Add Item
+          </button>
         </div>
-    </form>
-    <input type="text" id="searchItem"  name="searchItem" placeholder="Search Items">
-   
-    <ul class="list-item">
-    </ul>
-    
-    <button class="Btn1" id="clearAll">Clear All</button>
-</div>
-    
+      </form>
+      <input
+        type="text"
+        id="searchItem"
+        name="searchItem"
+        placeholder="Search Items"
+      />
+
+      <ul class="list-item"></ul>
+
+      <button class="Btn1" id="clearAll">Clear All</button>
+    </div>
+
     <script src="app.js"></script>
   </body>
 </html>

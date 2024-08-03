@@ -1,54 +1,53 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-body{
-   height: 100vh;
-    /* min-width: 100vw; */
-    line-height: 1.5;
-    background-image: url(./images/bg1.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size:cover;
-    
-   
+body {
+  height: 100vh;
+  /* min-width: 100vw; */
+  line-height: 1.5;
+  background-image: url(./images/bg1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.container{
-    max-width: 500px;
-    margin: 30px auto;
-    padding: 20px;
+.container {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 20px;
 }
-.header{
-    display: flex;
-    padding: 2em;
+.header {
+  display: flex;
+  padding: 2em;
 }
-#headText{
-    font-family: "Bona Nova SC", serif;
-    font-size: 3em;
-    font-weight: 400;
-    color: #fff;
+#headText {
+  font-family: "Bona Nova SC", serif;
+  font-size: 3em;
+  font-weight: 400;
+  color: #fff;
 }
 
-#inputText{
-    padding:0.8rem 0.5rem;
-    width: 100%;
-    margin-bottom: 2rem;
-    border-radius: 5px;
-    border: none;
-    outline-style: none;
+#inputText {
+  padding: 0.8rem 0.5rem;
+  width: 100%;
+  margin-bottom: 2rem;
+  border-radius: 5px;
+  border: none;
+  outline-style: none;
 }
-#clearAll{
-  background-color:#555555d2;
+#clearAll {
+  background-color: #555555d2;
   padding: 0.6rem 0.6rem;
   color: #fff;
   font-weight: 600;
   margin: 10px auto;
   border: none;
-  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
- }
-  
-#searchItem{
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+    rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+
+#searchItem {
   width: 100%;
   padding: 0.5rem 0.5rem;
   background-color: #f1f1f172;
@@ -62,141 +61,137 @@ body{
   margin-bottom: 8px;
 }
 
-#clearAll{
+#clearAll {
   width: 100%;
 }
 
-.list-item li{
-    color: rgb(255, 255, 255);
-    list-style: none;
-    background-color: #53525287;
-    border: 0.5px solid #f2f2f2;
-    padding: 3px 10px;
-    font-size: 18px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
+.list-item li {
+  color: rgb(255, 255, 255);
+  list-style: none;
+  background-color: #53525287;
+  border: 0.5px solid #f2f2f2;
+  padding: 3px 10px;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.ree{
-    color: red;
+.ree {
+  color: red;
 }
-.remove-item{
-    background: none;
-    border: none;
-    color: red;
+.remove-item {
+  background: none;
+  border: none;
+  color: red;
 }
 .btn {
-    --border-color: linear-gradient(-45deg, #ffae00, #7e03aa, #00fffb);
-    --border-width: 0.125em;
-    --curve-size: 0.5em;
-    --blur: 30px;
-    --bg: #080312;
-    --color: #afffff;
-    color: var(--color);
-    margin-bottom: 20px;
-    cursor: pointer;
-    /* use position: relative; so that BG is only for .btn */
-    position: relative;
-    isolation: isolate;
-    display: inline-grid;
-    place-content: center;
-    padding: 0.5em 1.5em;
-    font-size: 17px;
-    display: flex;
-    border: 0;
-    text-transform: uppercase;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
-    clip-path: polygon(
-      /* Top-left */ 0% var(--curve-size),
-      var(--curve-size) 0,
-      /* top-right */ 100% 0,
-      100% calc(100% - var(--curve-size)),
-      /* bottom-right 1 */ calc(100% - var(--curve-size)) 100%,
-      /* bottom-right 2 */ 0 100%
-    );
-    transition: color 250ms;
-  }
-  
-  .btn::after,
-  .btn::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-  }
-  
-  .btn::before {
-    background: var(--border-color);
-    background-size: 300% 300%;
-    animation: move-bg7234 5s ease infinite;
-    z-index: -2;
-  }
-  
-  @keyframes move-bg7234 {
-    0% {
-      background-position: 31% 0%;
-    }
-  
-    50% {
-      background-position: 70% 100%;
-    }
-  
-    100% {
-      background-position: 31% 0%;
-    }
-  }
-  
-  .btn::after {
-    background: var(--bg);
-    z-index: -1;
-    clip-path: polygon(
-      /* Top-left */ var(--border-width)
-        calc(var(--curve-size) + var(--border-width) * 0.5),
-      calc(var(--curve-size) + var(--border-width) * 0.5) var(--border-width),
-      /* top-right */ calc(100% - var(--border-width)) var(--border-width),
-      calc(100% - var(--border-width))
-        calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
-      /* bottom-right 1 */
-        calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
-        calc(100% - var(--border-width)),
-      /* bottom-right 2 */ var(--border-width) calc(100% - var(--border-width))
-    );
-    transition: clip-path 500ms;
-  }
-  
-  .btn:where(:hover, :focus)::after {
-    clip-path: polygon(
-      /* Top-left */ calc(100% - var(--border-width))
-        calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
-      calc(100% - var(--border-width)) var(--border-width),
-      /* top-right */ calc(100% - var(--border-width)) var(--border-width),
-      calc(100% - var(--border-width))
-        calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
-      /* bottom-right 1 */
-        calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
-        calc(100% - var(--border-width)),
-      /* bottom-right 2 */
-        calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
-        calc(100% - var(--border-width))
-    );
-    transition: 200ms;
-  }
-  
-  .btn:where(:hover, :focus) {
-    color: #fff;
+  --border-color: linear-gradient(-45deg, #ffae00, #7e03aa, #00fffb);
+  --border-width: 0.125em;
+  --curve-size: 0.5em;
+  --blur: 30px;
+  --bg: #080312;
+  --color: #afffff;
+  color: var(--color);
+  margin-bottom: 20px;
+  cursor: pointer;
+  /* use position: relative; so that BG is only for .btn */
+  position: relative;
+  isolation: isolate;
+  display: inline-grid;
+  place-content: center;
+  padding: 0.5em 1.5em;
+  font-size: 17px;
+  display: flex;
+  border: 0;
+  text-transform: uppercase;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
+  clip-path: polygon(
+    /* Top-left */ 0% var(--curve-size),
+    var(--curve-size) 0,
+    /* top-right */ 100% 0,
+    100% calc(100% - var(--curve-size)),
+    /* bottom-right 1 */ calc(100% - var(--curve-size)) 100%,
+    /* bottom-right 2 */ 0 100%
+  );
+  transition: color 250ms;
+}
+
+.btn::after,
+.btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.btn::before {
+  background: var(--border-color);
+  background-size: 300% 300%;
+  animation: move-bg7234 5s ease infinite;
+  z-index: -2;
+}
+
+@keyframes move-bg7234 {
+  0% {
+    background-position: 31% 0%;
   }
 
- 
-  @media all and (max-width : 492px){
-    .header{
-      max-width: 100%;
-      /* padding: 5px 10px; */
-      align-items: center;
-      margin: 0 auto;
-     
-    }
-    #headText{
-      font-size: 2rem;
-      
-    }
+  50% {
+    background-position: 70% 100%;
   }
+
+  100% {
+    background-position: 31% 0%;
+  }
+}
+
+.btn::after {
+  background: var(--bg);
+  z-index: -1;
+  clip-path: polygon(
+    /* Top-left */ var(--border-width)
+      calc(var(--curve-size) + var(--border-width) * 0.5),
+    calc(var(--curve-size) + var(--border-width) * 0.5) var(--border-width),
+    /* top-right */ calc(100% - var(--border-width)) var(--border-width),
+    calc(100% - var(--border-width))
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+    /* bottom-right 1 */
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+      calc(100% - var(--border-width)),
+    /* bottom-right 2 */ var(--border-width) calc(100% - var(--border-width))
+  );
+  transition: clip-path 500ms;
+}
+
+.btn:where(:hover, :focus)::after {
+  clip-path: polygon(
+    /* Top-left */ calc(100% - var(--border-width))
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+    calc(100% - var(--border-width)) var(--border-width),
+    /* top-right */ calc(100% - var(--border-width)) var(--border-width),
+    calc(100% - var(--border-width))
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+    /* bottom-right 1 */
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+      calc(100% - var(--border-width)),
+    /* bottom-right 2 */
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+      calc(100% - var(--border-width))
+  );
+  transition: 200ms;
+}
+
+.btn:where(:hover, :focus) {
+  color: #fff;
+}
+
+@media all and (max-width: 492px) {
+  .header {
+    max-width: 100%;
+    /* padding: 5px 10px; */
+    align-items: center;
+    margin: 0 auto;
+  }
+  #headText {
+    font-size: 2rem;
+  }
+}
