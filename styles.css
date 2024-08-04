@@ -183,7 +183,11 @@ body {
 .btn:where(:hover, :focus) {
   color: #fff;
 }
-
+.errorr{
+  color: #B31312;
+  font-size: 18px;
+  padding-bottom: 5px;
+}
 @media all and (max-width: 492px) {
   .header {
     max-width: 100%;

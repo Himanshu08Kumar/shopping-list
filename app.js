@@ -9,22 +9,20 @@ btn.addEventListener("click", (e) => {
   e.preventDefault();
   const text = inputText.value.trim();
   if (text !== "") {
-    const li = document.createElement("li");
-    li.textContent = text;
-    inputText.value = "";
-    listItem.appendChild(li);
-    const deleteBtn = createButton();
-    li.appendChild(deleteBtn);
-    hiddenBtn();
+    if(!duplicateText(text)){
+      const li = document.createElement("li");
+      li.textContent = text;
+      inputText.value = "";
+      listItem.appendChild(li);
+      const deleteBtn = createButton();
+      li.appendChild(deleteBtn);
+      hiddenBtn();
+    } else{
+      error("You already have this item in your list")
+     inputText.value='';
+    }
   } else {
-    err.style.color = "#B31312";
-    err.style.fontSize = "18px";
-    err.style.paddingBottom = "5px";
-    // err.style.textAlign  = 'center'
-    err.textContent = "Please enter some text";
-    setTimeout((e) => {
-      err.textContent = "";
-    }, 2000);
+   error("Enter some value");
   }
 });
 function createButton() {
@@ -80,3 +78,21 @@ clearAll.addEventListener("click", () => {
 });
 
 hiddenBtn();
+
+function duplicateText(text){
+ let items = listItem.getElementsByTagName('li');
+ items = Array.from(items);
+ for(let item of items){
+  if(item.firstChild.textContent.toLowerCase() === text.toLowerCase()){
+    return true;
+ }
+}return false;
+}
+
+function error(message){
+  err.className = 'errorr'
+  err.textContent = message;
+  setTimeout((e) => {
+    err.textContent = "";
+  }, 2000);
+}
